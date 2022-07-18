@@ -20,4 +20,4 @@ def detect_outliers(graphs, method=1, p_value=0.05):
     outlier_indices, = np.where(distances > cutoff)
     outliers = [graphs[int(i)] for i in outlier_indices]
 
-    return outliers
+    return outliers, outlier_indices
