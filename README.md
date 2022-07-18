@@ -39,7 +39,10 @@ adj_matrix = np.array([[1, 1, 0],
 graph = Graph(node_attrs, adj_matrix)
 ```
 
-<img src="example_graph.svg" />
+<p align="center">
+  <img src="example_graph.svg" width="35%" />
+  <br />
+</p>
 
 Once you have a list of `Graph` objects, simply submit them into `outgraph.detect_outliers`:
 
