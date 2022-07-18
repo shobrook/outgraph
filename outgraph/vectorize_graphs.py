@@ -13,7 +13,7 @@ def _adjacency_vector(G):
     A = G.adjacency_matrix
     n = A.shape[0]
 
-    return A[np.tril_indices(n)]
+    return A[np.tril_indices(n, k=-1)]
 
 
 def vectorize_graphs(graphs, method=1):
