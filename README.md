@@ -1,6 +1,6 @@
 # outgraph
 
-`outgraph` is a simple outlier detection algorithm for graph datasets. Given a list of graphs, it uses [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) detect which graphs are outliers based on either their topology or node attributes.
+`outgraph` is a simple outlier detection tool for graph datasets. Given a list of graphs, it uses [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) detect which graphs are outliers based on either their topology or node attributes.
 
 > Note: `outgraph` only works for datasets where each graph has an equal number of nodes.
 
