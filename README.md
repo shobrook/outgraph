@@ -22,6 +22,8 @@ Unlike most approaches to graph outlier detection, `outgraph` does not use machi
 
 Then, the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) between each vector and the distribution of vectors is calculated. Lastly, a [Chi-Squared distribution](https://en.wikipedia.org/wiki/Chi-squared_distribution) is used to model the distribution of distances and identify the distances outside a cutoff threshold (e.g. p < 0.05).
 
+This approach is based off [this article.](https://towardsdatascience.com/multivariate-outlier-detection-in-python-e946cfc843b3)
+
 ## Usage
 
 Each graph in your dataset needs to be an instance of `outgraph.Graph`. This object has two parameters, `node_attrs` and `adjacency_matrix` –– both numpy arrays where the indices correspond to nodes. Example:
