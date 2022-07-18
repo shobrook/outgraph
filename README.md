@@ -20,7 +20,7 @@ Unlike most approaches to graph outlier detection, `outgraph` does not use machi
 2. Flattening the adjacency matrix
 3. A concatenation of 1 and 2
 
-Then, the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) between each vector and the distribution of vectors is calculated. Lastly, a [Chi-Squared distribution](https://en.wikipedia.org/wiki/Chi-squared_distribution) is used to model the distribution of distances and identify the distances outside a cutoff threshold (e.g. p < 0.05).
+Then, the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) between each vector and the distribution of vectors is calculated. Lastly, a [Chi-Squared distribution](https://en.wikipedia.org/wiki/Chi-squared_distribution) is used to model the distances and identify those outside a cutoff threshold (e.g. p < 0.05).
 
 This approach is based off [this article.](https://towardsdatascience.com/multivariate-outlier-detection-in-python-e946cfc843b3)
 
@@ -44,7 +44,7 @@ graph = Graph(node_attrs, adj_matrix)
   <br />
 </p>
 
-Once you have a list of `Graph` objects, simply submit them into `outgraph.detect_outliers`:
+Once you have a list of `Graph` objects, simply submit them to `outgraph.detect_outliers`:
 
 ```python
 from outgraph import Graph, detect_outliers
@@ -53,4 +53,4 @@ graphs = [Graph(), ...]
 outliers, indices = detect_outliers(graphs, method=1, p_value=0.05)
 ```
 
-Notice the `method` and `p_value` parameters. The `method` parameter is an integer between 1 and 3 that corresponds to one of the three graph vectorization methods described in the ![How it Works](##How it Works) section. `p_value` is the outlier cutoff threshold.
+Notice the `method` and `p_value` parameters. The `method` parameter is an integer between 1 and 3 that corresponds to one of the three graph vectorization methods described in the [How it Works](#how-it-works) section. `p_value` is the outlier cutoff threshold.
